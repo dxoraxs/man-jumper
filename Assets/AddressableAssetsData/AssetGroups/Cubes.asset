@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Cubes
+  m_EditorClassIdentifier: 
+  m_GroupName: Cubes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6adc1b7721479f441a2e223a362815ed
+  m_SerializeEntries:
+  - m_GUID: 7711a5bbad8c4784b9841e52c64f0cee
+    m_Address: Cubes/FenceBlock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6074b59f0a89fb04abff066ee678a1da
+    m_Address: Cubes/SawBlock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec8283fe1da32ab42bab993e8350ea0a
+    m_Address: Cubes/FinishBlock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4bad8f46f7ea6a4f83403bb940a80b8
+    m_Address: Cubes/DefaultBlock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b94a6961f4d1cc43a2dd4d7696a991e
+    m_Address: Cubes/TurnBlock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0692cdf0f9e93d647b9fd8fd05577d1f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 75158486e3095d24fa3cc7f3cabd5edf, type: 2}
+    - {fileID: 11400000, guid: 091c1cea493423c46a60f9b42152a583, type: 2}
