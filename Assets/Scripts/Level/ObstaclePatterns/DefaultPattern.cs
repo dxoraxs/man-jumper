@@ -10,7 +10,7 @@ namespace Level.ObstaclePatterns
         public override IEnumerable<PatternCubeResult> GeneratePattern(
             Vector3 startPosition, ref Vector3 direction)
         {
-            var result = new List<PatternCubeResult> { new(CubeTypes.Default, startPosition + direction) };
+            var result = new List<PatternCubeResult> { new PatternCubeResult(CubeTypes.Default, startPosition + direction) };
 
             return result;
         }

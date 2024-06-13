@@ -10,8 +10,8 @@ namespace Level
     {
         public const int OFFSET_INDEX_ANIMATION = 5;
         private const float ANIMATE_DURATION = .25f;
-        private readonly CompositeDisposable _compositeDisposable = new();
-        private readonly Dictionary<int, CubeAnimatorStateData> _cubeContainers = new();
+        private readonly CompositeDisposable _compositeDisposable = new CompositeDisposable();
+        private readonly Dictionary<int, CubeAnimatorStateData> _cubeContainers = new Dictionary<int, CubeAnimatorStateData>();
         private readonly Vector3 DISABLE_OFFSET_POSITION = Vector3.up * -3;
 
         public CubeAnimator(CubeContainer[] cubeContainers, PatternLevelData[] patternLevelData,

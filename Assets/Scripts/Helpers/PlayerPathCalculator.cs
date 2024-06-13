@@ -25,7 +25,7 @@ namespace Helpers
                         var previewPoint = path[previewIndex].Position;
                         var targetPosition = path[targetIndex].Position;
 
-                        while (Vector3.Distance(newCalculatePath[^1], targetPosition) > 0.1f)
+                        while (Vector3.Distance(newCalculatePath[newCalculatePath.Count - 1], targetPosition) > 0.1f)
                         {
                             timer += .1f;
                             var newTransformPosition =

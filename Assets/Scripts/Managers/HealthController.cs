@@ -7,10 +7,10 @@ namespace Managers
 {
     public class HealthController : IDisposable
     {
-        private readonly CompositeDisposable _disposable = new();
+        private readonly CompositeDisposable _disposable = new CompositeDisposable();
         private readonly ReactiveProperty<int> _heath;
 
-        private readonly Subject<bool> _invincibilityStream = new();
+        private readonly Subject<bool> _invincibilityStream = new Subject<bool>();
         private readonly int _maxHealth;
         private Tween _invincibilityTween;
         private bool _isInvincibility;

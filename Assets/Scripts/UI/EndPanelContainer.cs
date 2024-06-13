@@ -10,7 +10,7 @@ namespace UI
 {
     public class EndPanelContainer : UIBaseContainer
     {
-        public static readonly List<ObstaclesTypes> FilterObstacles = new()
+        public static readonly List<ObstaclesTypes> FilterObstacles = new List<ObstaclesTypes>()
             { ObstaclesTypes.Fence, ObstaclesTypes.Saw, ObstaclesTypes.Space, ObstaclesTypes.DoubleSpace };
 
         [SerializeField] private TMP_Text _endWinText;
@@ -51,7 +51,7 @@ namespace UI
             for (var index = 0; index < FilterObstacles.Count; index++)
             {
                 var filterObstacle = FilterObstacles[index];
-                var count = endPanelData.ObstaclesCount.GetValueOrDefault(filterObstacle, 0);
+                var count = endPanelData.ObstaclesCount.TryGetValue(filterObstacle, out var value) ? value : 0;
                 _obstacleViewData[index].Text.text = count.ToString();
             }
         }

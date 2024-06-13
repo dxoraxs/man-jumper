@@ -9,12 +9,12 @@ namespace UI
         IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private bool _isEnabled = true;
-        private readonly Subject<Unit> _onClickSubject = new();
-        private readonly Subject<Unit> _onDownSubject = new();
-        private readonly Subject<bool> _onEnableSubject = new();
-        private readonly Subject<Unit> _onPointerEnterSubject = new();
-        private readonly Subject<Unit> _onPointerExitSubject = new();
-        private readonly Subject<Unit> _onUpSubject = new();
+        private readonly Subject<Unit> _onClickSubject = new Subject<Unit>();
+        private readonly Subject<Unit> _onDownSubject = new Subject<Unit>();
+        private readonly Subject<bool> _onEnableSubject = new Subject<bool>();
+        private readonly Subject<Unit> _onPointerEnterSubject = new Subject<Unit>();
+        private readonly Subject<Unit> _onPointerExitSubject = new Subject<Unit>();
+        private readonly Subject<Unit> _onUpSubject = new Subject<Unit>();
 
         public IObservable<Unit> OnDownObservable => _onDownSubject;
         public IObservable<Unit> OnUpObservable => _onUpSubject;

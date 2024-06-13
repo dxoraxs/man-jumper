@@ -10,14 +10,14 @@ namespace Player
 {
     public class HitCubeListener : IDisposable
     {
-        public static readonly List<CubeTypes> CubeHitFilter = new()
+        public static readonly List<CubeTypes> CubeHitFilter = new List<CubeTypes>()
             { CubeTypes.Saw, CubeTypes.Fence, CubeTypes.Space };
 
-        private readonly CompositeDisposable _compositeDisposable = new();
-        private readonly Dictionary<int, PatternCubeResult> _filtersCube = new();
+        private readonly CompositeDisposable _compositeDisposable = new CompositeDisposable();
+        private readonly Dictionary<int, PatternCubeResult> _filtersCube = new Dictionary<int, PatternCubeResult>();
 
         private readonly PlayerMoverController _playerMoverController;
-        private readonly Dictionary<CubeTypes, List<PlayerMoverController.JumpState>> _triggerZone = new();
+        private readonly Dictionary<CubeTypes, List<PlayerMoverController.JumpState>> _triggerZone = new Dictionary<CubeTypes, List<PlayerMoverController.JumpState>>();
         private bool _isWaitHit;
 
         private CubeTypes _lastFilterCubeType;

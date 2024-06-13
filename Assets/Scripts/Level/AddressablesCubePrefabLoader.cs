@@ -9,7 +9,7 @@ namespace Level
     public class AddressablesCubePrefabLoader : MonoBehaviour
     {
         [SerializeField] private List<AssetReference> _prefabReferences;
-        private readonly Dictionary<CubeTypes, CubeContainer> _cubes = new();
+        private readonly Dictionary<CubeTypes, CubeContainer> _cubes = new Dictionary<CubeTypes, CubeContainer>();
 
         public IReadOnlyDictionary<CubeTypes, CubeContainer> Cubes => _cubes;
 

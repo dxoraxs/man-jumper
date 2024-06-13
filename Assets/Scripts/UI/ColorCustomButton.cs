@@ -8,8 +8,8 @@ namespace UI
     {
         [SerializeField] private Image _graphics;
         [Space] [SerializeField] private Color _defaultState = Color.white;
-        [SerializeField] private Color _clickState = new(.5f, .5f, .5f, 1);
-        [SerializeField] private Color _disableState = new(.35f, .35f, .35f, 1);
+        [SerializeField] private Color _clickState = new Color(.5f, .5f, .5f, 1);
+        [SerializeField] private Color _disableState = new Color(.35f, .35f, .35f, 1);
 
         private void Start()
         {

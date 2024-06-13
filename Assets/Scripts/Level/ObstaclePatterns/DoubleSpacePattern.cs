@@ -12,9 +12,9 @@ namespace Level.ObstaclePatterns
         {
             var result = new List<PatternCubeResult>
             {
-                new(CubeTypes.Space, startPosition + direction),
-                new(CubeTypes.Space, startPosition + direction * 2),
-                new(CubeTypes.Default, startPosition + direction * 3)
+                new PatternCubeResult(CubeTypes.Space, startPosition + direction),
+                new PatternCubeResult(CubeTypes.Space, startPosition + direction * 2),
+                new PatternCubeResult(CubeTypes.Default, startPosition + direction * 3)
             };
             return result;
         }

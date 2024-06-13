@@ -13,11 +13,11 @@ namespace Managers.Booster
 {
     public class BoosterController
     {
-        private readonly Dictionary<int, BoosterLevelData> _boosterCubeDictionary = new();
+        private readonly Dictionary<int, BoosterLevelData> _boosterCubeDictionary = new Dictionary<int, BoosterLevelData>();
         private readonly Transform _boosterParent;
-        private readonly Dictionary<BoosterType, BoosterValue> _boosterValueDictionary = new();
-        private readonly CompositeDisposable _disposable = new();
-        private readonly Subject<(BoosterType type, float value)> _onTakeBooster = new();
+        private readonly Dictionary<BoosterType, BoosterValue> _boosterValueDictionary = new Dictionary<BoosterType, BoosterValue>();
+        private readonly CompositeDisposable _disposable = new CompositeDisposable();
+        private readonly Subject<(BoosterType type, float value)> _onTakeBooster = new Subject<(BoosterType type, float value)>();
 
         public BoosterController(BoosterSettings boosterSettings, IObservable<int> cubeIndexObservable,
             Transform boosterParent)
@@ -77,7 +77,7 @@ namespace Managers.Booster
             for (var index = 0; index < cubePath.Length; index++)
             {
                 var patternCube = cubePath[index];
-                if (patternCube.Type is not (CubeTypes.Default or CubeTypes.Turn)) continue;
+                if (patternCube.Type != CubeTypes.Default && patternCube.Type != CubeTypes.Turn) continue;
 
                 var currentBooster = GetRandomBooster(_boosterValueDictionary, sumChance);
 

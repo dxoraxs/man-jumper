@@ -13,13 +13,13 @@ namespace Level
     {
         [ReadOnly] [SerializeField] private AddressablesCubePrefabLoader _addressablesCubePrefab;
         [SerializeField] private Transform _levelContainer;
-        private readonly Dictionary<ObstaclesTypes, BasePattern> _patterns = new();
-        private readonly List<CubeContainer> _usedCubes = new();
+        private readonly Dictionary<ObstaclesTypes, BasePattern> _patterns = new Dictionary<ObstaclesTypes, BasePattern>();
+        private readonly List<CubeContainer> _usedCubes = new List<CubeContainer>();
         private Vector3 _direction = Vector3.forward;
         private Vector3 _startPosition = Vector3.zero;
 
         public Transform LevelContainer => _levelContainer;
-        public PatternLevelDTO PatternsLevelData { get; } = new();
+        public PatternLevelDTO PatternsLevelData { get; } = new PatternLevelDTO();
 
         public IEnumerable<CubeContainer> UsedCubes => _usedCubes;
 
@@ -86,7 +86,7 @@ namespace Level
             GenerateLevelPattern(count, _startPosition, ref _direction);
             PatternsLevelData.InitializeCubePath();
             InstantiateCubes();
-            _startPosition = _usedCubes[^1].transform.position;
+            _startPosition = _usedCubes[_usedCubes.Count - 1].transform.position;
         }
 
         private void GenerateLevelPattern(int count, Vector3 startPosition, ref Vector3 direction)

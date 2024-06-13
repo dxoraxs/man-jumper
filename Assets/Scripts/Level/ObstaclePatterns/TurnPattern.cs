@@ -11,7 +11,7 @@ namespace Level.ObstaclePatterns
             Vector3 startPosition, ref Vector3 direction)
         {
             var position = startPosition + direction;
-            var result = new List<PatternCubeResult> { new(CubeTypes.Turn, position) };
+            var result = new List<PatternCubeResult> { new PatternCubeResult(CubeTypes.Turn, position) };
             var randomSide = Random.value < 0 ? -1 : 1;
             direction = Quaternion.Euler(0, randomSide * 90, 0) * direction;
             result.Add(new PatternCubeResult(CubeTypes.Default, position + direction));

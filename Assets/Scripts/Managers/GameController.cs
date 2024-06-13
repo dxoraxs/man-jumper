@@ -156,7 +156,7 @@ namespace Managers
 
             foreach (var patternCube in _hitCubeListener.GetFiltersCube)
             {
-                if (patternCube.Type is CubeTypes.Default or CubeTypes.Turn)
+                if (patternCube.Type == CubeTypes.Default || patternCube.Type == CubeTypes.Turn)
                     Gizmos.color = Color.green;
                 else
                     Gizmos.color = Color.red;

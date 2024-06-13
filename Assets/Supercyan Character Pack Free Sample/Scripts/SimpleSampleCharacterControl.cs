@@ -16,7 +16,7 @@ namespace Supercyan.FreeSample
         private readonly float m_backwardRunScale = 0.66f;
         private readonly float m_backwardsWalkScale = 0.16f;
 
-        private readonly List<Collider> m_collisions = new();
+        private readonly List<Collider> m_collisions = new List<Collider>();
 
         private readonly float m_interpolation = 10;
         private readonly float m_minJumpInterval = 0.25f;

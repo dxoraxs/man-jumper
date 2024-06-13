@@ -10,7 +10,7 @@ namespace Player
 {
     public class PlayerCubeMoveListener
     {
-        private readonly ReactiveProperty<int> _lastStayCubeIndex = new(0);
+        private readonly ReactiveProperty<int> _lastStayCubeIndex = new ReactiveProperty<int>(0);
         private readonly PlayerMoverController _playerMoverController;
 
         private PatternCubeResult[] _allPath = Array.Empty<PatternCubeResult>();

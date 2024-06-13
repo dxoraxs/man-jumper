@@ -6,8 +6,8 @@ namespace Level
 {
     public class PatternLevelDTO
     {
-        private readonly List<PatternCubeResult> _cubePath = new();
-        private readonly List<PatternLevelData> _patternsLevelData = new();
+        private readonly List<PatternCubeResult> _cubePath = new List<PatternCubeResult>();
+        private readonly List<PatternLevelData> _patternsLevelData = new List<PatternLevelData>();
 
         public IEnumerable<PatternLevelData> PatternLevelData => _patternsLevelData;
         public IEnumerable<PatternCubeResult> CubePath => _cubePath;
